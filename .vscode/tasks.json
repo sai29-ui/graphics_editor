@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build 2D Graphics Editor",
+            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+            "args": [
+                "-g",
+                "editor.c",
+                "-o",
+                "C:\\msys64\\ucrt64\\bin\\editor.exe",
+                "-Wall",
+                "-Wextra",
+                "-O2",
+                "-I", "C:\\msys64\\ucrt64\\include",
+                "-I", "C:\\msys64\\ucrt64\\include\\ncurses",
+                "-L", "C:\\msys64\\ucrt64\\lib",
+                "-lncursesw"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "C:\\msys64\\ucrt64\\bin;${env:PATH}"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
